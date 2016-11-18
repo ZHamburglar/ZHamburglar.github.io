@@ -1,0 +1,175 @@
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+ @font-face {
+ font-family: "My Custom Font";
+ src: url(./PressStart2P.ttf) format("truetype");
+ 	}
+
+
+html, body {
+	width: 100%;
+	height: 100%;
+
+	background: tomato;
+	color: #eee;
+
+}
+
+
+/*********************************************
+ * BOX CONTENTS
+ *********************************************/
+
+h1 {
+	padding: 40px;
+	font-size: 30px;
+	text-transform: uppercase;
+	font-family: "My Custom Font", Verdana, Tahoma;
+
+}
+
+p {
+	padding: 10px 40px 10px 40px;
+	font-size: 18px;
+	line-height: 120%;
+	font-family: "My Custom Font", Verdana, Tahoma;
+}
+
+#how-to {
+	padding: 10px 40px 10px 40px;
+	width: 200px;
+	font-size: 18px;
+	line-height: 120%;
+	font-family: "My Custom Font", Verdana, Tahoma;
+}
+
+/*********************************************
+ * THE 3D WORLD
+ *********************************************/
+
+#world {
+	-webkit-perspective: 500px;
+ 	-webkit-perspective-origin: 50% 50%;
+
+	width: 100%;
+	height: 100%;
+}
+
+#room {
+	width: 600px;
+	height: 500px;
+
+	position: absolute;
+	left: 55%;
+	top: 40%;
+	margin-left: -370px;
+	margin-top: -250px;
+
+}
+
+#back,
+#front,
+#wall-left,
+#wall-right,
+#wall-top,
+#wall-bottom {
+	position: inherit;
+	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.45) inset;
+	   -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.45) inset;
+	     -o-box-shadow: 0 0 20px rgba(0, 0, 0, 0.45) inset;
+	        box-shadow: 0 0 20px rgba(0, 0, 0, 0.45) inset;
+}
+
+#back {
+	width: 600px;
+	height: 500px;
+	background-color: black;
+	/*background: rgba(0,100,120,1);*/
+	text-align: center;
+	-webkit-transform: translateZ(-49px);
+}
+
+#front {
+	width: 600px;
+	height: 500px;
+	background: url('../assets/images/clouds.png') no-repeat bottom;
+	-webkit-transform: translateZ(50px);
+}
+
+#control-panel {
+	width: 600px;
+	height: 200px;
+	background-color: black;
+	/*background: url('../assets/images/clouds.png') no-repeat bottom;*/
+	-webkit-transform: translateY(-200px) translateZ(100px) rotate3d(1, 0, 0, 45deg);
+}
+
+#testtop {
+	width: 200px;
+	height: 200px;
+	background: url('../assets/images/totem01.gif') no-repeat bottom;
+	-webkit-transform: translateX(150px) translateY(150px)  translateZ(40px);
+}
+
+#peanutbutter {
+	width: 90%;
+	height: 90%;
+	background: url('../assets/images/peanutbutter.gif') no-repeat bottom;
+	-webkit-transform: translateX(120px) translateY(-100px) translateZ(-90px);
+}
+
+#wall-left {
+	height: 500px;
+	width: 100px;
+	left: 0px;
+	background: #bbb;
+	-webkit-transform: translateX(-50px) translateY(-650px) rotate3d(0, 50, 0, 90deg);
+}
+
+#wall-right {
+	height: 500px;
+	width: 100px;
+	right: 0px;
+
+	background: #bbb;
+
+	-webkit-transform: translateX(50px) translateY(-650px) rotate3d(0, 50, 0, -90deg);
+}
+
+#wall-top {
+	height: 100px;
+	width: 600px;
+	top: 0px;
+
+	background: #999;
+
+	-webkit-transform: translateY(-50px) rotate3d(50, 0, 0, 90deg);
+}
+
+#wall-bottom {
+	height: 100px;
+	width: 600px;
+	bottom: 0px;
+
+	background: #999;
+
+	-webkit-transform: translateY(50px) rotate3d(50, 0, 0, -90deg);
+}
+
+#shadow {
+	position: absolute;
+	width: 600px;
+	height: 100px;
+
+	background: rgba(0,0,0,0.2);
+	border-radius: 8px;
+
+	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.45);
+	   -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.45);
+	     -o-box-shadow: 0 0 20px rgba(0, 0, 0, 0.45);
+	        box-shadow: 0 0 20px rgba(0, 0, 0, 0.45);
+
+	-webkit-transform: translate3d(0, 550px, -10px) rotateX(70deg);
+}
